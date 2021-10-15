@@ -1,0 +1,16 @@
+:host {
+  position: relative;
+  display: inline-flex;
+  height: 140px;
+  width: 140px;
+}
+
+.paper {
+  background: var(--paper-gradient);
+}
+.rock {
+  background: var(--rock-gradient);
+}
+.scissors {
+  background: var(--scissors-gradient);
+}

@@ -7,7 +7,9 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "style": "scss",
+          "displayBlock": true,
+          "changeDetection": "OnPush"
         },
         "@schematics/angular:application": {
           "strict": true
@@ -62,6 +64,29 @@
                   "maximumError": "4kb"
                 }
               ]
+            },
+            "dev": {
+              "optimization": false,
+              "outputHashing": "none",
+              "sourceMap": false,
+              "namedChunks": true,
+              "aot": true,
+              "extractLicenses": false,
+              "vendorChunk": false,
+              "buildOptimizer": false,
+              "verbose": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
             }
           }
         },
@@ -73,6 +98,9 @@
           "configurations": {
             "production": {
               "browserTarget": "frontendmentor-rock-paper-scissors-angular:build:production"
+            },
+            "dev": {
+              "browserTarget": "frontendmentor-rock-paper-scissors-angular:build:dev"
             }
           }
         },

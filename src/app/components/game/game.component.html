@@ -1,0 +1,9 @@
+<div [ngSwitch]="(gameState | async)?.state">
+  <div *ngSwitchCase="'initial'">
+    <app-selector></app-selector>
+  </div>
+
+  <div *ngSwitchDefault>
+    <app-game-progress [state]="gameState | async"></app-game-progress>
+  </div>
+</div>

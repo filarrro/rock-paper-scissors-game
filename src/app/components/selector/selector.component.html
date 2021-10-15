@@ -1,0 +1,27 @@
+<div class="wrapper relative flex py-8 justify-around items-center flex-wrap">
+  <div class="triangle absolute">
+    <svg
+      class="w-full h-full"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 305 277"
+    >
+      <path
+        fill="none"
+        stroke="#000"
+        stroke-width="15"
+        d="M291.5 7.5H4.574c3.119 0 52.416 84.667 147.892 254L291.5 7.5z"
+        opacity=".2"
+      />
+    </svg>
+  </div>
+
+  <button type="button" aria-label="paper" (click)="select('paper')">
+    <app-icon-button type="paper"></app-icon-button>
+  </button>
+  <button type="button" aria-label="scissors" (click)="select('scissors')">
+    <app-icon-button type="scissors"></app-icon-button>
+  </button>
+  <button type="button" aria-label="rock" (click)="select('rock')">
+    <app-icon-button type="rock"></app-icon-button>
+  </button>
+</div>

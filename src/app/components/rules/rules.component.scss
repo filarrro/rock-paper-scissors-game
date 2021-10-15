@@ -1,0 +1,16 @@
+:host {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+}
+
+.rules-grid {
+  display: grid;
+  max-height: 600px;
+
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 1fr 100px;
+
+  align-items: center;
+}

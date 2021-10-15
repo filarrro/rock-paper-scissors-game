@@ -1,0 +1,32 @@
+<div class="flex flex-col items-center">
+  <div class="icon">
+    <app-icon-button [type]="userIconType"></app-icon-button>
+  </div>
+  <p class="mt-4 text-center uppercase text-md text-white">You picked</p>
+</div>
+
+<div class="flex flex-col items-center">
+  <div class="icon">
+    <app-icon-button [type]="aiIconType"></app-icon-button>
+  </div>
+  <p class="mt-4 text-center uppercase text-md text-white">The house picked</p>
+</div>
+
+<div
+  class="col-span-full self-end text-center text-white text-5xl uppercase"
+  [ngSwitch]="result"
+>
+  <span *ngSwitchCase="'win'">You won</span>
+  <span *ngSwitchCase="'loose'">You lose</span>
+  <span *ngSwitchCase="'tie'">It's a tie!</span>
+</div>
+
+<div *ngIf="isResultShown" class="col-span-full flex justify-center">
+  <button
+    type="button"
+    class="py-4 px-16 bg-white uppercase text-primary-dark text-center rounded-lg font-medium leading-none"
+    (click)="playAgain()"
+  >
+    Play again
+  </button>
+</div>
