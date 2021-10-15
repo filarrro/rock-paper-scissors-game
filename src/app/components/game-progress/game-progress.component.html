@@ -1,15 +1,25 @@
-<div class="flex flex-col items-center">
+<div class="flex flex-col items-center lg:flex-col-reverse">
   <div class="icon">
-    <app-icon-button [type]="userIconType"></app-icon-button>
+    <app-icon-button
+      [type]="userIconType"
+      [hasGlow]="result === 'win'"
+    ></app-icon-button>
   </div>
-  <p class="mt-4 text-center uppercase text-md text-white">You picked</p>
+  <p class="mt-4 lg:mb-10 text-center uppercase text-white text-md lg:text-xl">
+    You picked
+  </p>
 </div>
 
-<div class="flex flex-col items-center">
+<div class="flex flex-col items-center lg:flex-col-reverse">
   <div class="icon">
-    <app-icon-button [type]="aiIconType"></app-icon-button>
+    <app-icon-button
+      [type]="aiIconType"
+      [hasGlow]="result === 'loose'"
+    ></app-icon-button>
   </div>
-  <p class="mt-4 text-center uppercase text-md text-white">The house picked</p>
+  <p class="mt-4 lg:mb-10 text-center uppercase text-white text-md lg:text-xl">
+    The house picked
+  </p>
 </div>
 
 <div
@@ -18,13 +28,22 @@
 >
   <span *ngSwitchCase="'win'">You won</span>
   <span *ngSwitchCase="'loose'">You lose</span>
-  <span *ngSwitchCase="'tie'">It's a tie!</span>
+  <span *ngSwitchCase="'tie'">It's a tie</span>
 </div>
 
 <div *ngIf="isResultShown" class="col-span-full flex justify-center">
   <button
     type="button"
-    class="py-4 px-16 bg-white uppercase text-primary-dark text-center rounded-lg font-medium leading-none"
+    class="
+      py-4
+      px-16
+      bg-white
+      uppercase
+      text-primary-dark text-center
+      rounded-lg
+      font-medium
+      leading-none
+    "
     (click)="playAgain()"
   >
     Play again

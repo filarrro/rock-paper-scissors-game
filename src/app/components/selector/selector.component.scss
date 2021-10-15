@@ -13,3 +13,9 @@
   right: 15%;
   bottom: 10%;
 }
+
+@media all and (min-width: 1024px) {
+  .wrapper {
+    max-width: 530px;
+  }
+}

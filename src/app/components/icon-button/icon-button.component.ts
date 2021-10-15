@@ -10,10 +10,11 @@ export type IconType = 'scissors' | 'rock' | 'paper';
 })
 export class IconButtonComponent {
   @Input() type: IconType | undefined;
+  @Input() hasGlow = false;
 
   get outerClass(): object {
     return {
-      'border-gray-600': !!this.type,
+      'border-bottom-color': !!this.type,
       'border-transparent': !this.type,
       ...(this.type && { [this.type]: true }),
     };

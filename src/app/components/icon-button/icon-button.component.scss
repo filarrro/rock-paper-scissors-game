@@ -3,14 +3,43 @@
   display: inline-flex;
   height: 140px;
   width: 140px;
+  overflow: visible;
 }
 
 .paper {
   background: var(--paper-gradient);
+  border-color: var(--paper-border);
 }
 .rock {
   background: var(--rock-gradient);
+  border-color: var(--rock-border);
 }
 .scissors {
   background: var(--scissors-gradient);
+  border-color: var(--scissors-border);
+}
+
+.glow {
+  position: absolute;
+  background-color: #FFF;
+
+  &-1 {
+    inset: -15%;
+    opacity: 0.03;
+  }
+  &-2 {
+    inset: -38%;
+    opacity: 0.03;
+  }
+  &-3 {
+    inset: -60%;
+    opacity: 0.02;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  :host {
+    height: 180px;
+    width: 180px;
+  }
 }
