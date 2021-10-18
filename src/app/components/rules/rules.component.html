@@ -1,5 +1,26 @@
-<div class="rules-grid relative w-full h-full px-8 bg-gray-50 lg:w-auto lg:h-auto lg:py-8 lg:px-10 lg:rounded-2xl">
-  <h2 class="rules-title text-4xl text-center text-primary-dark uppercase lg:text-left">Rules</h2>
+<div
+  cdkTrapFocus
+  [cdkTrapFocusAutoCapture]="true"
+  class="
+    rules-grid
+    relative
+    w-full
+    h-full
+    px-8
+    bg-gray-50
+    lg:w-auto lg:h-auto lg:py-8 lg:px-10 lg:rounded-2xl
+  "
+>
+  <h2
+    class="
+      rules-title
+      text-4xl text-center text-primary-dark
+      uppercase
+      lg:text-left
+    "
+  >
+    Rules
+  </h2>
 
   <img
     src="assets/image-rules.svg"
@@ -10,13 +31,22 @@
   <div class="rules-close flex justify-center">
     <button
       type="button"
-      class="p-4 lg:absolute lg:top-7 lg:right-3"
+      class="
+        p-4
+        rounded-full
+        text-gray-500
+        hover:text-gray-700
+        focus-visible:outline-none
+        focus-visible:text-gray-900
+        focus-visible:bg-gray-300
+        lg:absolute lg:top-7 lg:right-3
+      "
       aria-label="Close rules modal"
       (click)="close()"
     >
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
         <path
-          fill="#3B4262"
+          fill="currentColor"
           fill-rule="evenodd"
           d="M16.97 0l2.122 2.121-7.425 7.425 7.425 7.425-2.121 2.12-7.425-7.424-7.425 7.425L0 16.97l7.425-7.425L0 2.121 2.121 0l7.425 7.425L16.971 0z"
           opacity=".25"

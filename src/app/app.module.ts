@@ -1,3 +1,4 @@
+import { A11yModule } from '@angular/cdk/a11y';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -20,13 +21,10 @@ import { RulesComponent } from './components/rules/rules.component';
     FooterComponent,
     GameComponent,
     GameProgressComponent,
-    RulesComponent
+    RulesComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, A11yModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

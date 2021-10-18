@@ -15,13 +15,43 @@
     </svg>
   </div>
 
-  <button type="button" aria-label="paper" (click)="select('paper')">
+  <button
+    type="button"
+    aria-label="paper"
+    class="
+      transform
+      transition-transform
+      hover:scale-110
+      focus-visible:outline-none focus-visible:scale-110
+    "
+    (click)="select('paper')"
+  >
     <app-icon-button type="paper"></app-icon-button>
   </button>
-  <button type="button" aria-label="scissors" (click)="select('scissors')">
+  <button
+    type="button"
+    aria-label="scissors"
+    class="
+      transform
+      transition-transform
+      hover:scale-110
+      focus-visible:outline-none focus-visible:scale-110
+    "
+    (click)="select('scissors')"
+  >
     <app-icon-button type="scissors"></app-icon-button>
   </button>
-  <button type="button" aria-label="rock" (click)="select('rock')">
+  <button
+    type="button"
+    aria-label="rock"
+    class="
+      transform
+      transition-transform
+      hover:scale-110
+      focus-visible:outline-none focus-visible:scale-110
+    "
+    (click)="select('rock')"
+  >
     <app-icon-button type="rock"></app-icon-button>
   </button>
 </div>

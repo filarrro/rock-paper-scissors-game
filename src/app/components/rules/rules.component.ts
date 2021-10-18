@@ -1,7 +1,8 @@
 import {
   ChangeDetectionStrategy,
   Component,
-  EventEmitter, HostBinding,
+  EventEmitter,
+  HostListener,
   Output,
 } from '@angular/core';
 
@@ -16,6 +17,7 @@ export class RulesComponent {
 
   constructor() {}
 
+  @HostListener('document:keydown.escape')
   close(): void {
     this.closeRules.emit();
   }
