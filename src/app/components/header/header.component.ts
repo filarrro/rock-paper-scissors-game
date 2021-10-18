@@ -11,7 +11,7 @@ import { AppService } from '../../app.service';
 const enter = trigger('enter', [
   transition('void => *', [
     style({ opacity: 0, transform: 'translateY(-120%)' }),
-    animate('0.25s 0.4s ease-out', style({ opacity: 1, transform: 'none' })),
+    animate('0.25s 0.6s ease-out', style({ opacity: 1, transform: 'none' })),
   ]),
 ]);
 
