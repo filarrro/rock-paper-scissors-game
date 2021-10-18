@@ -1,8 +1,9 @@
-<div class="flex flex-col items-center lg:flex-col-reverse">
+<div class="icon-user flex flex-col items-center lg:flex-col-reverse">
   <div class="icon">
     <app-icon-button
       [type]="userIconType"
       [hasGlow]="result === 'win'"
+      size="lg"
     ></app-icon-button>
   </div>
   <p class="mt-4 lg:mb-10 text-center uppercase text-white text-md lg:text-xl">
@@ -10,11 +11,12 @@
   </p>
 </div>
 
-<div class="flex flex-col items-center lg:flex-col-reverse">
+<div class="icon-cpu flex flex-col items-center lg:flex-col-reverse">
   <div class="icon">
     <app-icon-button
       [type]="aiIconType"
       [hasGlow]="result === 'loose'"
+      size="lg"
     ></app-icon-button>
   </div>
   <p class="mt-4 lg:mb-10 text-center uppercase text-white text-md lg:text-xl">
@@ -23,7 +25,7 @@
 </div>
 
 <div
-  class="col-span-full self-end text-center text-white text-5xl uppercase"
+  class="result-text col-span-full self-end text-center text-white text-5xl uppercase lg:text-6xl"
   [ngSwitch]="result"
 >
   <span *ngSwitchCase="'win'">You won</span>
@@ -31,7 +33,7 @@
   <span *ngSwitchCase="'tie'">It's a tie</span>
 </div>
 
-<div *ngIf="isResultShown" class="col-span-full flex justify-center">
+<div *ngIf="isResultShown" class="play-again col-span-full flex justify-center">
   <button
     type="button"
     class="
@@ -43,6 +45,7 @@
       rounded-lg
       font-medium
       leading-none
+      lg:px-20
     "
     (click)="playAgain()"
   >

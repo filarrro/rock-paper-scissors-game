@@ -1,6 +1,12 @@
-import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
+import {
+  Component,
+  ChangeDetectionStrategy,
+  Input,
+  HostBinding,
+} from '@angular/core';
 
 export type IconType = 'scissors' | 'rock' | 'paper';
+export type IconSize = 'md' | 'lg';
 
 @Component({
   selector: 'app-icon-button',
@@ -11,6 +17,7 @@ export type IconType = 'scissors' | 'rock' | 'paper';
 export class IconButtonComponent {
   @Input() type: IconType | undefined;
   @Input() hasGlow = false;
+  @Input() size: IconSize = 'md';
 
   get outerClass(): object {
     return {
@@ -27,5 +34,10 @@ export class IconButtonComponent {
       'bg-dark': !this.type,
       'border-transparent': !this.type,
     };
+  }
+
+  @HostBinding('class')
+  get sizeClass(): string {
+    return `size-${this.size}`;
   }
 }

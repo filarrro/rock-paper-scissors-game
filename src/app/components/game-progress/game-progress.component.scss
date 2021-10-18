@@ -4,6 +4,35 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto 80px 50px;
   grid-gap: 20px;
+
+  grid-template-areas: "icon icon-cpu" "result result" "play play";
 }
 
+.result-text {
+  grid-area: result;
+}
 
+.play-again {
+  grid-area: play;
+}
+
+.icon-user {
+  grid-area: icon;
+}
+
+.icon-cpu {
+  grid-area: icon-cpu;
+}
+
+@media all and (min-width: 1024px) {
+  :host {
+    grid-template-columns: 1fr 30% 1fr;
+    grid-template-rows: 1fr 80px 50px 1fr;
+
+    grid-template-areas:
+      "icon . icon-cpu"
+      "icon result icon-cpu"
+      "icon play icon-cpu"
+      "icon . icon-cpu";
+  }
+}

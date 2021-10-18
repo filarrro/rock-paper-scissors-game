@@ -41,5 +41,10 @@
   :host {
     height: 180px;
     width: 180px;
+
+    &.size-lg {
+      height: 240px;
+      width: 240px;
+    }
   }
 }

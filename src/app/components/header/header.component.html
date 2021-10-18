@@ -10,10 +10,10 @@
     border-gray-400
   "
 >
-  <img src="assets/logo.svg" alt="Paper Rock Scissors game" class="h-16" />
+  <img src="assets/logo.svg" alt="Paper Rock Scissors game" class="h-16 lg:h-20" />
 
-  <div class="rounded-md bg-gray-200 w-20 h-20 text-center pt-2">
+  <div class="w-20 h-20 lg:w-28 lg:h-28 pt-2 rounded-md bg-gray-200 text-center">
     <div class="score text-md uppercase font-medium text-primary">Score</div>
-    <div class="text-4xl text-primary-dark">{{ score$ | async }}</div>
+    <div class="text-4xl lg:text-6xl text-primary-dark">{{ score$ | async }}</div>
   </div>
 </div>
