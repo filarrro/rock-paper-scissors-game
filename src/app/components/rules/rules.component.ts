@@ -16,8 +16,6 @@ export class RulesComponent {
 
   constructor() {}
 
-  @HostBinding('class.bg-gray-50') bg = true;
-
   close(): void {
     this.closeRules.emit();
   }
