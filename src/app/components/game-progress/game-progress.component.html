@@ -2,7 +2,7 @@
   <div class="icon">
     <app-icon-button
       [type]="userIconType"
-      [hasGlow]="result === 'win'"
+      [showRipple]="result === 'win'"
       size="lg"
     ></app-icon-button>
   </div>
@@ -15,7 +15,7 @@
   <div class="icon">
     <app-icon-button
       [type]="aiIconType"
-      [hasGlow]="result === 'loose'"
+      [showRipple]="result === 'loose'"
       size="lg"
     ></app-icon-button>
   </div>

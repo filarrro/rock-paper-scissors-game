@@ -1,22 +1,49 @@
 import {
-  Component,
+  animate,
+  query,
+  stagger,
+  style,
+  transition,
+  trigger,
+} from '@angular/animations';
+import {
   ChangeDetectionStrategy,
-  Input,
+  Component,
   HostBinding,
+  Input,
 } from '@angular/core';
 
 export type IconType = 'scissors' | 'rock' | 'paper';
 export type IconSize = 'md' | 'lg';
+
+const ripple = trigger('ripple', [
+  transition('* => *', [
+    query(
+      ':enter',
+      [
+        style({ opacity: 0, transform: 'scale(0)' }),
+        stagger(100, [
+          animate(
+            '0.8s ease-out',
+            style({ opacity: 1, transform: 'scale(1)' })
+          ),
+        ]),
+      ],
+      { optional: true }
+    ),
+  ]),
+]);
 
 @Component({
   selector: 'app-icon-button',
   templateUrl: './icon-button.component.html',
   styleUrls: ['./icon-button.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  animations: [ripple],
 })
 export class IconButtonComponent {
   @Input() type: IconType | undefined;
-  @Input() hasGlow = false;
+  @Input() showRipple = false;
   @Input() size: IconSize = 'md';
 
   get outerClass(): object {
@@ -39,5 +66,9 @@ export class IconButtonComponent {
   @HostBinding('class')
   get sizeClass(): string {
     return `size-${this.size}`;
+  }
+
+  get items(): any[] {
+    return this.showRipple ? [3, 2, 1] : [];
   }
 }

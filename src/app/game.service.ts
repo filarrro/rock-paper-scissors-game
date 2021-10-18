@@ -92,7 +92,7 @@ export class GameService {
     this.state.next(nextState);
     setTimeout(() => {
       this.goToResult();
-    }, 400);
+    }, 100);
   }
 
   private get currentState(): State {

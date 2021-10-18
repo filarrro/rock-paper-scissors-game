@@ -1,8 +1,9 @@
-<ng-container *ngIf="hasGlow">
-  <div class="glow glow-1 rounded-full"></div>
-  <div class="glow glow-2 rounded-full"></div>
-  <div class="glow glow-3 rounded-full"></div>
-</ng-container>
+<div [@ripple]="showRipple ? 'open' : 'collapsed'">
+  <div *ngFor="let item of items" class="glow glow-{{item}} rounded-full"></div>
+<!--  <div class="glow glow-1 rounded-full"></div>-->
+<!--  <div class="glow glow-2 rounded-full"></div>-->
+<!--  <div class="glow glow-3 rounded-full"></div>-->
+</div>
 <span
   class="
     relative
