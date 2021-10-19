@@ -12,6 +12,7 @@ import {
   HostBinding,
   Input,
 } from '@angular/core';
+import { fade } from '../../animations/fade';
 
 export type IconType = 'scissors' | 'rock' | 'paper';
 export type IconSize = 'md' | 'lg';
@@ -39,7 +40,7 @@ const ripple = trigger('ripple', [
   templateUrl: './icon-button.component.html',
   styleUrls: ['./icon-button.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  animations: [ripple],
+  animations: [fade, ripple],
 })
 export class IconButtonComponent {
   @Input() type: IconType | undefined;

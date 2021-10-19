@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { fade } from '../../animations/fade';
 import { GameService, State } from '../../game.service';
 import { IconType } from '../icon-button/icon-button.component';
 
@@ -7,6 +8,7 @@ import { IconType } from '../icon-button/icon-button.component';
   templateUrl: './game-progress.component.html',
   styleUrls: ['./game-progress.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  animations: [fade],
 })
 export class GameProgressComponent {
   @Input() state!: State | null | undefined;
@@ -21,7 +23,10 @@ export class GameProgressComponent {
   }
 
   get aiIconType(): IconType | undefined {
-    if (this.state?.state === 'bothSelected' || this.state?.state === 'result') {
+    if (
+      this.state?.state === 'bothSelected' ||
+      this.state?.state === 'result'
+    ) {
       return this.state?.aiIconType;
     }
     return undefined;

@@ -1,8 +1,5 @@
 <div [@ripple]="showRipple ? 'open' : 'collapsed'">
   <div *ngFor="let item of items" class="glow glow-{{item}} rounded-full"></div>
-<!--  <div class="glow glow-1 rounded-full"></div>-->
-<!--  <div class="glow glow-2 rounded-full"></div>-->
-<!--  <div class="glow glow-3 rounded-full"></div>-->
 </div>
 <span
   class="
@@ -32,6 +29,7 @@
   >
     <svg
       *ngSwitchCase="'paper'"
+      @fade
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 49 59"
       class="w-3/5 h-3/5"
@@ -43,6 +41,7 @@
     </svg>
     <svg
       *ngSwitchCase="'rock'"
+      @fade
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 48 48"
       class="w-3/5 h-1/2"
@@ -54,6 +53,7 @@
     </svg>
     <svg
       *ngSwitchCase="'scissors'"
+      @fade
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 51 58"
       class="w-3/5 h-3/5"

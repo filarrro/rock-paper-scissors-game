@@ -13,17 +13,8 @@ import {
   HostListener,
   Output,
 } from '@angular/core';
+import { fade } from '../../animations/fade';
 
-const fade = trigger('fade', [
-  transition(':enter', [
-    style({ opacity: 0 }),
-    animate('0.2s ease-out', style({ opacity: 1 })),
-  ]),
-  transition(':leave', [
-    style({ opacity: 1 }),
-    animate('0.17s ease-out', style({ opacity: 0 })),
-  ]),
-]);
 const enter = trigger('enter', [
   transition(':enter', [
     query(':scope > *', [style({ opacity: 0 })], {

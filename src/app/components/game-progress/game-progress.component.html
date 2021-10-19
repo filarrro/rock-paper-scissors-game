@@ -25,17 +25,37 @@
 </div>
 
 <div
-  class="result-text col-span-full self-end text-center text-white text-5xl uppercase lg:text-6xl"
+  class="
+    result-text
+    col-span-full
+    self-end
+    text-center text-white text-5xl
+    uppercase
+    lg:text-6xl
+  "
   [ngSwitch]="result"
 >
-  <span *ngSwitchCase="'win'">You won</span>
-  <span *ngSwitchCase="'loose'">You lose</span>
-  <span *ngSwitchCase="'tie'">It's a tie</span>
+  <span
+    [@fade]="{ value: ':enter', params: { delay: '150ms' } }"
+    *ngSwitchCase="'win'"
+    >You won</span
+  >
+  <span
+    [@fade]="{ value: ':enter', params: { delay: '150ms' } }"
+    *ngSwitchCase="'loose'"
+    >You lose</span
+  >
+  <span
+    [@fade]="{ value: ':enter', params: { delay: '150ms' } }"
+    *ngSwitchCase="'tie'"
+    >It's a tie</span
+  >
 </div>
 
 <div *ngIf="isResultShown" class="play-again col-span-full flex justify-center">
   <button
     type="button"
+    [@fade]="{ value: ':enter', params: { delay: '350ms' } }"
     class="
       py-4
       px-16
@@ -46,8 +66,7 @@
       font-medium
       leading-none
       hover:text-red-500
-      focus-visible:outline-none
-      focus-visible:text-red-500
+      focus-visible:outline-none focus-visible:text-red-500
       lg:px-20
     "
     (click)="playAgain()"
