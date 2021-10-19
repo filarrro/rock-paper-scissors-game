@@ -30,9 +30,6 @@ export type State =
 type GameResult = 'win' | 'loose' | 'tie';
 const MOVES = ['scissors', 'rock', 'paper'] as const;
 
-// Paper beats Rock
-// Rock beats Scissors
-// Scissors beats Paper
 const GAME_RESULTS: Record<IconType, Record<IconType, GameResult>> = {
   paper: {
     paper: 'tie',

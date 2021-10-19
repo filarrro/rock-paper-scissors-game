@@ -21,24 +21,18 @@
 
 .glow {
   position: absolute;
-  //opacity: 0;
-  //transform: scale(0);
-  //background-color: #FFF;
 
   &-1 {
     inset: -15%;
     background-color: rgba(#fff, 0.03);
-    //opacity: 0.03;
   }
   &-2 {
     inset: -38%;
     background-color: rgba(#fff, 0.03);
-    //opacity: 0.03;
   }
   &-3 {
     inset: -60%;
     background-color: rgba(#fff, 0.02);
-    //opacity: 0.02;
   }
 }
 
