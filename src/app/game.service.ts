@@ -22,7 +22,11 @@ interface ResultState {
   result: GameResult;
 }
 
-export type State = InitialState | UserSelectedState | BothSelectedState | ResultState;
+export type State =
+  | InitialState
+  | UserSelectedState
+  | BothSelectedState
+  | ResultState;
 type GameResult = 'win' | 'loose' | 'tie';
 const MOVES = ['scissors', 'rock', 'paper'] as const;
 

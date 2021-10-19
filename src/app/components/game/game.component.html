@@ -4,6 +4,9 @@
   </div>
 
   <div *ngSwitchDefault>
-    <app-game-progress [state]="gameState | async" class="max-w-7xl mx-auto"></app-game-progress>
+    <app-game-progress
+      [state]="gameState | async"
+      class="max-w-7xl mx-auto"
+    ></app-game-progress>
   </div>
 </div>

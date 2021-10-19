@@ -1,6 +1,6 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 html {
   --primary-text: hsl(229, 64%, 46%);
@@ -9,22 +9,47 @@ html {
 
   --white: hsl(255, 100%, 100%);
 
-  --background-gradient: linear-gradient(180deg, hsl(214, 47%, 23%) 0%, hsl(237, 49%, 15%) 100%);
-  --scissors-gradient: linear-gradient(90deg, hsl(39, 89%, 49%) 0%, hsl(40, 84%, 53%) 100%);
+  --background-gradient: linear-gradient(
+    180deg,
+    hsl(214, 47%, 23%) 0%,
+    hsl(237, 49%, 15%) 100%
+  );
+  --scissors-gradient: linear-gradient(
+    90deg,
+    hsl(39, 89%, 49%) 0%,
+    hsl(40, 84%, 53%) 100%
+  );
   --scissors-border: hsl(39, 89%, 40%);
-  --paper-gradient: linear-gradient(90deg, hsl(230, 89%, 62%) 0%, hsl(230, 89%, 65%) 100%);
+  --paper-gradient: linear-gradient(
+    90deg,
+    hsl(230, 89%, 62%) 0%,
+    hsl(230, 89%, 65%) 100%
+  );
   --paper-border: hsl(230, 80%, 55%);
-  --rock-gradient: linear-gradient(90deg, hsl(349, 71%, 52%) 0%, hsl(349, 70%, 56%) 100%);
+  --rock-gradient: linear-gradient(
+    90deg,
+    hsl(349, 71%, 52%) 0%,
+    hsl(349, 70%, 56%) 100%
+  );
   --rock-border: hsl(349, 55%, 42%);
-  --lizard-gradient: linear-gradient(90deg, hsl(261, 73%, 60%) 0%, hsl(261, 72%, 63%) 100%);
-  --cyan-gradient: linear-gradient(90deg, hsl(189, 59%, 53%) 0%, hsl(189, 58%, 57%) 100%);
+  --lizard-gradient: linear-gradient(
+    90deg,
+    hsl(261, 73%, 60%) 0%,
+    hsl(261, 72%, 63%) 100%
+  );
+  --cyan-gradient: linear-gradient(
+    90deg,
+    hsl(189, 59%, 53%) 0%,
+    hsl(189, 58%, 57%) 100%
+  );
 }
 
-html, body {
+html,
+body {
   height: 100%;
   background: var(--background-gradient);
 
-  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-family: "Barlow Semi Condensed", sans-serif;
   letter-spacing: 0.1rem;
 }
 
@@ -33,11 +58,11 @@ html, body {
 }
 
 .text-primary {
-  color: var(--primary-text)
+  color: var(--primary-text);
 }
 
 .text-primary-dark {
-  color: var(--primary-dark-text)
+  color: var(--primary-dark-text);
 }
 
 .bg-dark {

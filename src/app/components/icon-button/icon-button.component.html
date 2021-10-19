@@ -1,5 +1,8 @@
 <div [@ripple]="showRipple ? 'open' : 'collapsed'">
-  <div *ngFor="let item of items" class="glow glow-{{item}} rounded-full"></div>
+  <div
+    *ngFor="let item of items"
+    class="glow glow-{{ item }} rounded-full"
+  ></div>
 </div>
 <span
   class="
@@ -15,15 +18,7 @@
   [ngClass]="outerClass"
 >
   <span
-    class="
-      flex
-      w-4/5
-      h-4/5
-      rounded-full
-      justify-center
-      items-center
-      border-t-8
-    "
+    class="flex w-4/5 h-4/5 rounded-full justify-center items-center border-t-8"
     [ngClass]="innerClass"
     [ngSwitch]="type"
   >

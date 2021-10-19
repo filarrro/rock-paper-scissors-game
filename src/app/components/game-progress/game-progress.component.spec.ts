@@ -8,9 +8,8 @@ describe('GameProgressComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GameProgressComponent ]
-    })
-    .compileComponents();
+      declarations: [GameProgressComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
