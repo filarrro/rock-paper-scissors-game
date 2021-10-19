@@ -12,7 +12,7 @@ import { IconType } from '../icon-button/icon-button.component';
 
 const enter = trigger('enter', [
   transition('void => *', [
-    query('button', [style({ transform: 'scale3d(0, 0, 0)' })], { optional: true }),
+    query('button', [style({ opacity: 0 })], { optional: true }),
     query(
       '.triangle',
       [style({ opacity: 0 }), animate('0.25s ease-out', style({ opacity: 1 }))],
@@ -22,7 +22,7 @@ const enter = trigger('enter', [
       'button',
       [
         stagger(120, [
-          animate('0.35s ease-out', style({ transform: 'scale3d(1, 1, 1)' })),
+          animate('0.35s ease-out', style({ opacity: 1 })),
         ]),
       ],
       { optional: true }
